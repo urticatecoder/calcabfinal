@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="./calcfinal.js" type="text/javascript"></script>
+    <link href="./derivatives.css" type="text/css" rel="stylesheet">
+    <title>Exponential Differentiation | Keaton Hawkins</title>
+  </head>
+  <body style="background: linear gradient(to right, #32a852, #32a852);">
+    <div style="margin-bottom: 5vh;">
+      <div id="navbarwrapper">
+        <div class="dropdown">
+          <button class="navbutton" onclick="location.href='./limits.html'">Limits</button>
+          <div class="dropdown-content" style="left: 4.5%;">
+            <a href="./limitsexplained.html">Limits Explained</a>
+            <a href="./limitdefinition.html">Limit Definition</a>
+            <a href="./lhopitalsrule.html">L'Hopital's Rule</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="navbutton" onclick="location.href='./derivatives.html'">Derivatives</button>
+          <div class="dropdown-content" style="left: 38%">
+            <a href="./limitdefinition.html">Limit Definition</a>
+            <a href="./powerrule.html">Power Rule</a>
+            <a href="./sumrule.html">Sum/Difference Rule</a>
+            <a href="./productrule.html">Product Rule</a>
+            <a href="./chainrule.html">Chain Rule</a>
+            <a href="./quotientrule.html">Quotient Rule</a>
+            <a href="./exprule.html">Exponential Differentiation</a>
+            <a href="./trigrules.html">Trigonometric Differentiation</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="navbutton" onclick="location.href='./integrals.html'">Integrals</button>
+          <div class="dropdown-content" style="left: 71%;">
+            <a href="./antiderivatives.html">Antiderivatives</a>
+            <a href="./area.html">Area and Riemann Sums</a>
+            <a href="./definiteintegrals.html">Definite Integrals</a>
+            <a href="./sumcalculator.html">Riemann Sum Calculator</a>
+          </div>
+        </div>
+        <div id="homebutton" onclick="location.href='./index.html'">Back to Home</div>
+        <div style="width: 100%; font-family: Bai Jamjuree; text-align: center; font-size: 1vw; grid-column: 1/span 3;">Keaton Hawkins AP Calculus AB Final</div>
+      </div>
+
+
+
+      <h1 class="ruleheader">Exponential Differentiation</h1>
+      <br><br>
+      <div class="normaltext">So far, we've looked at how to differentiate different combinations of monomials, whether they be added, multiplied, or composed. But we haven't given much consideration to other types of functions altogether. Take exponential functions, for example. The properties of exponential derivatives are some of the most important properties in the whole field of calculus. In fact, the exponential function e<sup>x</sup> is the only real function whose derivative is equal to its value. That is, the derivative of e<sup>x</sup> is just e<sup>x</sup>. But why is that? To start, let's look at the rule for differentiating any exponential function of the form a<sup>x</sup>:</div>
+      <br><br>
+      <img src="./images/expdiffrule.PNG" style="display: block; margin: 0 auto;">
+      <br><br>
+      <div class="normaltext">Using this formula, you can see why e<sup>x</sup>'s derivative is itself. Technically, its derivative is e<sup>x</sup> • ln(e). But as we all know, ln(e) is just one, so the derivative just ends up being e<sup>x</sup>. In fact, this property of e<sup>x</sup> is considered by many to be the <i>defining</i> characteristic of the value e. It is the only number which, when used as the base of a simple exponential function, has a derivative of itself. For all other bases, the derivative is simply proportional to the function. The proportionality constant is ln(a), where a is the base of the exponential function. Now then, we know the rule. Let's consider why it works. Imagine a group of bunnies which doubles every day. Its population size can be represented with the function P(t) = 2<sup>t</sup>. At time t=0 days, there is just 2<sup>0</sup> = 1 bunny. At time t=1 day, there are 2<sup>1</sup> = 2 bunnies. At time t=2 days, there are 2<sup>2</sup> = 4 bunnies. This pattern continues. At time t=3 days, there are 8 bunnies. After 4 days, there are 16 bunnies. After 5 days, there are 32 bunnies. After 6 days, there are 64 bunnies:</div>
+      <br><br>
+      <img src="./images/bunnies.PNG" style="display: block; margin: 0 auto;">
+      <br><br>
+      <div class="normaltext">Notice that each day, the amount by which the population changes is equal to the population at the start of that day. For instance, there are 32 bunnies at the start of day 6. After day 6 is over, that amount has doubled, and 32 new bunnies have been created. So, the value of the function P(t) at the start of that day is equal to the amount by which that value changed over one day. If the rate at which this function changes is equal to the value of the function itself, then shouldn't P'(t) = P(t)? Not quite. Remember that for the derivative, we're not interested in how much the function's value changes per <i>day</i> (or whatever unit you're using). We want to know how the value of the function changes in response to an infinitesimally small change in its input. This change is called dx, or in this case, dt. Consider the following expression:</div>
+      <br><br>
+      <img src="./images/expfunctionderivativelimit.PNG" style="margin: 0 auto; display: block;">
+      <br><br>
+      <div class="normaltext">Does it look familiar? It should. That expression is the limit definition of a derivative for the function 2<sup>t</sup>. The only change is that instead of using Δt and taking the limit as Δt approaches zero, I used the expression dt. Remember, dt is an infinitesimally small change in t. In other words, whenever we use the expression dt, we're really talking about what happens as dt goes to 0. So the expression above is just the limit definition expressed a bit differently. Notice: we can take advantage of our exponential properties here. We are adding two values in the exponent of the 2 in the numerator. We can split this up into the product of 2<sup>t</sup> and 2<sup>dt</sup>. Then, we can factor 2<sup>t</sup> out of the expression above:</div>
+      <br><br>
+      <img src="./images/twotothetlimitdef.PNG" style="margin: 0 auto; display: block;">
+      <br><br>
+      <div class="normaltext">So clearly, this value is 2<sup>t</sup> times some constant, which is the parenthetical on the right side of the expression above. In the absence of a better analysis tool, let's try plugging in a really small value for dx, say 0.0001. When we do that, the expression becomes:</div>
+      <br><br>
+      <img src="./images/expderivestimate.PNG" style="margin: 0 auto; display: block;">
+      <br><br>
+      <div class="normaltext">Of course, that is not the exact value of the constant because in reality dt is much smaller than 0.0001. In reality, it is infintesimally small. But it gives us a good estimate, and if you try plugging in smaller and smaller numbers for dt, you'll notice that the constant gets closer and closer to a fixed value, approximately 0.6931471806... That is the value of ln(2). Now lets imagine that our initial function had been 3<sup>t</sup>. We can use the exact same process to find what the proportionality constant would be for that exponential function:</div>
+      <br><br>
+      <img src="./images/3tothet.PNG" style="display: block; margin: 0 auto;">
+      <br><br>
+      <div class="normaltext">Again, this proportionality constant will approach a single fixed value as dt approaches 0. That value is ln(3), or 1.0986122887... So, for an exponential function with any base, a, we can say that its derivative  is equal to:</div>
+      <br><br>
+      <img src="./images/atothet.PNG" style="display: block; margin: 0 auto;">
+      <br><br>
+      <div class="normaltext">And, as dt approaches zero, the value of the constant on the right approaches the natural logarithm of the base, a. If the base is the special number e, then the value of the constant will approach 1. Neato! (We will serve David Coleman until our dying breath).</div>
+    </div>
+  </body>
+</html>

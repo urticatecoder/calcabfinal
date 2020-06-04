@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="./derivatives.css" rel="stylesheet" type="text/css">
+    <script src="./calcfinal.js" type="text/javascript"></script>
+    <title>Sum/Difference Rules | Keaton Hawkins</title>
+  </head>
+  <body>
+    <div style="margin-bottom: 5vh;">
+      <div id="navbarwrapper">
+        <div class="dropdown">
+          <button class="navbutton" onclick="location.href='./limits.html'">Limits</button>
+          <div class="dropdown-content" style="left: 4.5%;">
+            <a href="./limitsexplained.html">Limits Explained</a>
+            <a href="./limitdefinition.html">Limit Definition</a>
+            <a href="./lhopitalsrule.html">L'Hopital's Rule</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="navbutton" onclick="location.href='./derivatives.html'">Derivatives</button>
+          <div class="dropdown-content" style="left: 38%">
+            <a href="./limitdefinition.html">Limit Definition</a>
+            <a href="./powerrule.html">Power Rule</a>
+            <a href="./sumrule.html">Sum/Difference Rule</a>
+            <a href="./productrule.html">Product Rule</a>
+            <a href="./chainrule.html">Chain Rule</a>
+            <a href="./quotientrule.html">Quotient Rule</a>
+            <a href="./exprule.html">Exponential Differentiation</a>
+            <a href="./trigrules.html">Trigonometric Differentiation</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="navbutton" onclick="location.href='./integrals.html'">Integrals</button>
+          <div class="dropdown-content" style="left: 71%;">
+            <a href="./antiderivatives.html">Antiderivatives</a>
+            <a href="./area.html">Area and Riemann Sums</a>
+            <a href="./definiteintegrals.html">Definite Integrals</a>
+            <a href="./sumcalculator.html">Riemann Sum Calculator</a>
+          </div>
+        </div>
+        <div id="homebutton" onclick="location.href='./index.html'">Back to Home</div>
+        <div style="width: 100%; font-family: Bai Jamjuree; text-align: center; font-size: 1vw; grid-column: 1/span 3;">Keaton Hawkins AP Calculus AB Final</div>
+      </div>
+
+
+
+      <h1 class="ruleheader">The Sum/Difference Rule</h1>
+      <br><br>
+      <div class="normaltext">The existence of the power rule makes finding derivatives of monomials much easier than it would be if we had to use the limit definition every time. Admittedly, though, it's rare that functions we encounter are simple monomials. Usually, they are some combination of other functions. For instance, the function f(x) = sin(x)+3x<sup>2</sup> is the sum of two separate functions: sin(x) and 3x<sup>2</sup>. Suppose we had a function g, which was defined as follows: g(x) = x<sup>5</sup> + x<sup>3</sup>. What would we do if we wanted to find its derivative? Could we just "distribute" the derivative to each of the terms in the function? Yes, actually, you can. The sum rule tells us how to handle taking derivatives of functions that are defined as the sum of two other functions:</div>
+      <br><br>
+      <img src="./images/sumrule.PNG" style="display: block; margin: 0 auto;">
+      <br><br>
+      <div class="normaltext">So for our function, f(x), its derivative, f'(x) = 5x<sup>4</sup> + 3x<sup>2</sup>. It seems right that this should work. If f(x) = g(x) + h(x), then the derivative of f(x) should just be the derivative of g(x) plus the derivative of h(x). If that just feels correct, good! It can never hurt to have strong mathematical intuition. But this does not hold true for multiplication. That is, if f(x) = g(x)•h(x), then the derivative of f(x) does NOT equal the derivative of g(x) times the derivative of h(x). So let's take a moment to analyze why exactly the sum rule works. To do that, let's recall what adding functions means graphically. Consider the graph below. The red curve is x<sup>5</sup>, the blue curve is x<sup>3</sup>, and the green curve is x<sup>5</sup> + x<sup>3</sup>:</div>
+      <br><br>
+      <img src="./images/threefunctionssumrule.PNG" style="display: block; margin: 0 auto; width: 30%;">
+      <br><br>
+      <div class="normaltext">Perhaps the reasoning is already becoming clear. Because the function for the green curve is equal to the sum of the respective functions of the red curve and blue curve, the distance between the green curve and the x-axis is the distance between the blue curve and the x-axis plus the distance between the red curve and the x-axis. Spend a moment looking at the graph to grasp that fully. Pick a point on the x-axis. Imagine drawing a line straight up until it intersects the red curve. Then, do the same with the blue curve. Now stack those two lines on top of each other, and they will go exactly up to the green curve. So then, let's consider a change in output, dy, caused by an infinitesimally small change in input, dx. <br><br> When you nudge the input slightly, the height of the red and blue curves each increase slightly. The green curve, whose height above the x-axis is always the sum of the heights of the blue and red curves will increase by an amount equal to the sum of the amounts by which the blue and red curves increased, won't it? Consider the labels below:</div>
+      <br><br>
+      <img src="./images/sumrulegraphwithlabels.PNG" style="display: block; margin: 0 auto; width: 30%;">
+      <br><br>
+      <div class="normaltext"> First of all, I assigned labels to each curve. The red curve is y<sub>1</sub> = x<sup>5</sup>, the blue curve is y<sub>2</sub> = x<sup>3</sup>, and the green curve is f(x) = x<sup>3</sup> + x<sup>5</sup>. Now consider the other labels added to the graph. For each one, a dx and a resultant dy are labelled. The dx is the same for each of them. On the graph, it is shown to be 0.1 units wide, but remember that this is exaggerated to illustrate the point. In reality you should think of dx as an infinitesimally small value. The resultant changes in y are color coded. dy<sub>1</sub> is represented by the red dashed line. dy<sub>2</sub> is represented by the blue dashed line. What about df? As you can see, df is equal to dy<sub>1</sub> + dy<sub>2</sub>. This makes perfect sense, since the value of f is y<sub>1</sub> + y<sub>2</sub>. So, a change in the value of both of those functions will result in a change in f that is equal to the sum of the changes in those functions. And remember! dx is the same for all of them. So if df = dy<sub>1</sub> + dy<sub>2</sub>, then:</div>
+      <br><br>
+      <img src="./images/sumrulerestated.PNG" style="display: block; margin: 0 auto;">
+      <br><br>
+      <div class="normaltext">And there we have our sum rule! Note that because subtraction is just multiplying one term by negative one and then adding, the sum rule also applies when a function is defined as the <i>difference</i> between two other functions. That's why it's called the sum/difference rule.</div>
+    </div>
+  </body>
+</html>

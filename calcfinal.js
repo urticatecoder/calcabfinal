@@ -1,0 +1,3 @@
+function equation(x){
+  
+}

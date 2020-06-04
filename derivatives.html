@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="./derivatives.css" rel="stylesheet" type="text/css">
+    <script src="./calcfinal.js" type="text/javascript"></script>
+    <title>Derivatives | Keaton Hawkins</title>
+  </head>
+  <body>
+    <div style="margin-bottom: 5vh;">
+      <div id="navbarwrapper">
+        <div class="dropdown">
+          <button class="navbutton" onclick="location.href='./limits.html'">Limits</button>
+          <div class="dropdown-content" style="left: 4.5%;">
+            <a href="./limitsexplained.html">Limits Explained</a>
+            <a href="./limitdefinition.html">Limit Definition</a>
+            <a href="./lhopitalsrule.html">L'Hopital's Rule</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="navbutton" onclick="location.href='./derivatives.html'">Derivatives</button>
+          <div class="dropdown-content" style="left: 38%">
+            <a href="./limitdefinition.html">Limit Definition</a>
+            <a href="./powerrule.html">Power Rule</a>
+            <a href="./sumrule.html">Sum/Difference Rule</a>
+            <a href="./productrule.html">Product Rule</a>
+            <a href="./chainrule.html">Chain Rule</a>
+            <a href="./quotientrule.html">Quotient Rule</a>
+            <a href="./exprule.html">Exponential Differentiation</a>
+            <a href="./trigrules.html">Trigonometric Differentiation</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="navbutton" onclick="location.href='./integrals.html'">Integrals</button>
+          <div class="dropdown-content" style="left: 71%;">
+            <a href="./antiderivatives.html">Antiderivatives</a>
+            <a href="./area.html">Area and Riemann Sums</a>
+            <a href="./definiteintegrals.html">Definite Integrals</a>
+            <a href="./sumcalculator.html">Riemann Sum Calculator</a>
+          </div>
+        </div>
+        <div id="homebutton" onclick="location.href='./index.html'">Back to Home</div>
+        <div style="width: 100%; font-family: Bai Jamjuree; text-align: center; font-size: 1vw; grid-column: 1/span 3;">Keaton Hawkins AP Calculus AB Final</div>
+      </div>
+
+
+
+      <h1 class="ruleheader">Derivatives</h1>
+      <br><br>
+      <div class="normaltext">Suppose you were presented with the the position vs. time graph for a car shown below, and asked to find the car's average velocity between the times t=0 and t=4:</div>
+      <br><br>
+      <img src="./images/derivativesposvstime.PNG" style="width:30%; display:block; margin: 0 auto;">
+      <br><br>
+      <div class="normaltext">That's quite a straightforward task, right? To find the velocity, just find the slope between those two points:</div>
+      <br><br>
+      <img src="./images/derivativesposvstimewithslope.PNG" style="width:30%; display:block; margin: 0 auto;">
+      <br><br>
+      <div class="normaltext">Mathematically, we can use the slope formula that we all know. Slope is equal to rise over run, or change in y over change in x:</div>
+      <br><br>
+      <img src="./images/simpleslopeformula.PNG" style="display: block; margin: 0 auto;">
+      <br><br>
+      <div class="normaltext">Remember that y is a function of x, and the values of y<sub>1</sub> and y<sub>2</sub> are the values of the function at x<sub>1</sub> and x<sub>2</sub> respectively. So, this formula can also be written as follows:</div>
+      <br><br>
+      <img src="./images/slopeformulas.PNG" style="display: block; margin: 0 auto;">
+      <br><br>
+      <div class="normaltext"> In any case, for our simple problem above, we could use our two points, (0,0), and (4,6) to calculate the car's average velocity between time t=0 and t=4:</div>
+      <br><br>
+      <img src="./images/derivativeshomepageproblemslope.PNG" style="display: block; margin: 0 auto;">
+      <br><br>
+      <div class="normaltext">Simple enough, right? Now let's change the problem slightly to the following: What is the car's velocity at time t=4? I'll even tell you that the graph of the car's position vs. time is modelled with the function y= &#8730 9x. This problem is much more challenging than the simple slope problem above. In fact, it's almost paradoxical. The slope of a graph is its <i>rate of change</i>, right? How can you find a rate of change at a single point? There's no range for any change to happen!</div>
+      <br><br>
+      <div class="normaltext">Well, it turns out there is a nice way to think about this question. To find the car's velocity at time t=4, you start by considering the slope between two points, just like normal. Then, you slide the two points closer and closer to each other, and consider what happens when the distance between them is zero, and both points are at t=4. In other words, you consider what the slope approaches as the distance between the two points on the x-axis approaches 0. All this use of the word approaches sounds familiar, right? It should remind you of limits, which we'll get to in a moment. For now, let's see what this means on a graph:</div>
+      <br><br>
+      <img src="./images/tangent_animation.gif" style="display: block; margin: 0 auto;">
+      <br><br>
+      <div class="normaltext">As you can see, in order to find the slope of this generic parabola at a single point (the point on the left) you start by finding the regular slope between two points, then slide those points closer and closer together along the x axis until they are exactly the same. What you're left with is a line that is tangent to the graph at the point on the left. The slope of this line is called the <i>instantaneous rate of change</i> at that point. So, to answer our question from above, all we need to do is find the slope of the line that is tangent to our position vs. time graph from above at the time t=4:</div>
+      <br><br>
+      <img src="./images/derivativesposvstimeinstslope.PNG" style="display:block; margin: 0 auto; width: 30%;">
+      <br><br>
+      <div class="normaltext">Ok, so we have a graphical intuition for instantaneous rates of change. But how do we go about calculating them? The instantaneous slope is different at every point along a curve. Wouldn't it be nice if we could take a function and use it to <i>derive</i> a new function which returns the slope of the original function at any given point? Well as it turns out, such a derived function exists for every curve. It's called a <i>derivative</i>.</div>
+    </div>
+  </body>
+</html>

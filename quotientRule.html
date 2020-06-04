@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="./calcfinal.js" type="text/javascript"></script>
+    <link href="./derivatives.css" type="text/css" rel="stylesheet">
+    <title>Quotient Rule | Keaton Hawkins</title>
+  </head>
+  <body style="background: linear gradient(to right, #32a852, #32a852);">
+    <div style="margin-bottom: 5vh;">
+      <div id="navbarwrapper">
+        <div class="dropdown">
+          <button class="navbutton" onclick="location.href='./limits.html'">Limits</button>
+          <div class="dropdown-content" style="left: 4.5%;">
+            <a href="./limitsexplained.html">Limits Explained</a>
+            <a href="./limitdefinition.html">Limit Definition</a>
+            <a href="./lhopitalsrule.html">L'Hopital's Rule</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="navbutton" onclick="location.href='./derivatives.html'">Derivatives</button>
+          <div class="dropdown-content" style="left: 38%">
+            <a href="./limitdefinition.html">Limit Definition</a>
+            <a href="./powerrule.html">Power Rule</a>
+            <a href="./sumrule.html">Sum/Difference Rule</a>
+            <a href="./productrule.html">Product Rule</a>
+            <a href="./chainrule.html">Chain Rule</a>
+            <a href="./quotientrule.html">Quotient Rule</a>
+            <a href="./exprule.html">Exponential Differentiation</a>
+            <a href="./trigrules.html">Trigonometric Differentiation</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="navbutton" onclick="location.href='./integrals.html'">Integrals</button>
+          <div class="dropdown-content" style="left: 71%;">
+            <a href="./antiderivatives.html">Antiderivatives</a>
+            <a href="./area.html">Area and Riemann Sums</a>
+            <a href="./definiteintegrals.html">Definite Integrals</a>
+            <a href="./sumcalculator.html">Riemann Sum Calculator</a>
+          </div>
+        </div>
+        <div id="homebutton" onclick="location.href='./index.html'">Back to Home</div>
+        <div style="width: 100%; font-family: Bai Jamjuree; text-align: center; font-size: 1vw; grid-column: 1/span 3;">Keaton Hawkins AP Calculus AB Final</div>
+      </div>
+
+
+      <h1 class="ruleheader">The Quotient Rule</h1>
+      <br><br>
+
+      <p style="font-size: 150%; font-family: Bai Jamjuree; width: 80%; display: block; margin: 0 auto;">Now that we've explained the product and chain rules, we can use those formulas to derive the quotient rule. The quotient rule is a daunting formula at first glance because it appears longer and more complicated than any of the other derivative formulas. Hopefully, though, this explanation will reveal that it's actually quite simple.
+      <br><br>
+      As you may have guessed, the quotient rule is used to find the derivative of a function defined as the quotient of two other functions. For instance, suppose you had the following function:
+      </p>
+      <br><br>
+
+      <img src="./images/quotientruleh(x).PNG" style="width:20%; height: 15vh; display: block; margin: 0 auto;">
+      <br><br>
+
+      <div style="font-size: 150%; font-family: Bai Jamjuree; width: 80%; display: block; margin: 0 auto;">
+        Clearly, this is the quotient of two functions. We can choose <div style="font-family: 'IM Fell Double Pica'; display: inline;">f</div>&nbspto represent the function in the numerator: f(x)=3x<sup>2</sup> - 2x. Then, we can choose <div style="font-family: 'IM Fell Double Pica'; display: inline;">g</div> to represent the function in the denominator: g(x)=e<sup>x</sup> + 2. So, if we want to find h'(x), the derivative of h(x), we need a derivative formula that will tell us how to handle differentiating quotients of two functions. That's where the quotient rule comes in. It tells us that we can find the derivative of a quotient of two functions as follows:
+      </div>
+      <br><br>
+
+      <img src="./images/quotientrule.PNG" style="display:block; margin: 0 auto;">
+      <br><br>
+
+      <div style="font-size: 150%; font-family: Bai Jamjuree; width: 80%; display: block; margin: 0 auto;">See? It looks long and complicated. But take a moment to break it down. The numerator of the derivate takes a form that is very similar to the product rule formula. The only difference is that the plus sign in the product rule has become a minus sign in the quotient rule. Note that this means you can not switch the order of the terms in the numerator like you can with the terms in the product rule formula. g(x)•f'(x) - f(x)•g'(x) ≠ f(x)•g'(x) - g(x)•f'(x), so you must follow the formula exactly. The denominator of the derivative, then, is just the denominator of the original function, squared. So even though the quotient rule formula may seem daunting and complex, as long as you can take the derivatives of the simple functions in the numerator and denominator, all you need to do is plug them into the formula and you're golden! Let's see how that would work for our example above. Let's say again that f(x) represents our numerator function and g(x) represents our denominator function. f'(x) would be 6x - 2, and g'(x) would be e<sup>x</sup>. Plugging these into the quotient rule formula, we get:</div>
+      <br><br>
+
+      <img src="./images/quotientruleh'(x)raw.PNG" style="display: block; margin: 0 auto;">
+      <br><br>
+      <img src="./images/quotientruleh'(x)simplified.PNG" style="display: block; margin: 0 auto;">
+      <br><br>
+
+      <div style="font-size: 150%; font-family: Bai Jamjuree; width: 80%; display: block; margin: 0 auto;">Ok, so we see that even though the quotient rule is long and has many terms, it's pretty straightforward to use, even if the resultant derivative ends up being as ugly as the example above. But just for fun, let's analyze the quotient rule a bit deeper. I mentioned that the numerator of the quotient rule formula resembles the product rule formula. That should make sense! Multiplication and division are related operations after all. In fact, any multiplication problem can be written as division, and vice-versa. For example, 3•2 is the same thing as 3/2<sup>-1</sup>. If that's the case, then couldn't we just write any function that is a quotient of two other functions as a product of two functions, and then use the product rule to find the derivative? Yes! Actually, the quotient rule can be viewed as a corollary of the product rule because it can be derived using that exact logic. Let's see how. <br><br>Consider the function defined by f(x) / g(x). That's exactly the same as f(x)•(g(x))<sup>-1</sup>. Let's see if we can use the product rule to derive the quotient rule (we'll need the chain rule too):</div>
+      <br><br>
+
+      <img src="./images/quotientrulederivation1.PNG" style="display: block; margin: 0 auto;">
+      <br><br>
+      <img src="./images/quotientrulederivation2.PNG" style="display: block; margin: 0 auto;">
+      <br><br>
+
+      <div style="font-size: 150%; font-family: Bai Jamjuree; width: 80%; display: block; margin: 0 auto;"> When we switch to a product of two functions, the second function is no longer just g(x). It becomes (g(x))<sup>-1</sup>. So, we need our chain rule to take a derivative. We can think of it as a composition of the functions x<sup>-1</sup> and g(x). So first we use the product rule, bringing the exponent of -1 to the front and subtracting one from it to find the new exponent of -2. But because g(x) is composed into that function, we need to multiply by its derivative. So, the derivative of (g(x))<sup>-1</sup> is -1•(g(x))<sup>-2</sup>•g'(x). Let's continue simplifying the above expression by moving the functions raised to negative powers to the denominator:</div>
+      <br><br>
+
+      <img style="display: block; margin: 0 auto;" src="./images/quotientrulederivation3.PNG">
+      <br><br>
+
+      <div style="font-size: 150%; font-family: Bai Jamjuree; width: 80%; display: block; margin: 0 auto;"> Now all we need to do is multiply the rational expression on the right by g(x)/g(x) in order to create a create a common denominator, then add them together:</div>
+      <br><br>
+
+      <img style="display: block; margin: 0 auto;" src="./images/quotientrulederivation4.PNG">
+      <br><br>
+
+      <div style="font-size: 150%; font-family: Bai Jamjuree; width: 80%; display: block; margin: 0 auto;"> And there we have our quotient rule. Neat right? As it turns out, the quotient rule is really just the product rule, but for a specific situation, one in which the second product is raised to a power of -1.</div>
+
+    </div>
+  </body>
+</html>
