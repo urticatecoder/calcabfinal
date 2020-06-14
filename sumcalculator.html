@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="./derivatives.css" rel="stylesheet" type="text/css">
+    <script src="./calcfinal.js" type="text/javascript"></script>
+    <title>Area Calculator | Keaton Hawkins</title>
+  </head>
+  <body>
+    <div style="margin-bottom: 5vh;">
+      <div id="navbarwrapper">
+        <div class="dropdown">
+          <button class="navbutton" onclick="location.href='./limits.html'">Limits</button>
+          <div class="dropdown-content" style="left: 4.5%;">
+            <a href="./lhopitalsrule.html">L'Hopital's Rule</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="navbutton" onclick="location.href='./derivatives.html'">Derivatives</button>
+          <div class="dropdown-content" style="left: 38%">
+            <a href="./limitdefinition.html">Limit Definition</a>
+            <a href="./powerrule.html">Power Rule</a>
+            <a href="./sumrule.html">Sum/Difference Rule</a>
+            <a href="./productrule.html">Product Rule</a>
+            <a href="./chainrule.html">Chain Rule</a>
+            <a href="./quotientrule.html">Quotient Rule</a>
+            <a href="./exprule.html">Exponential Differentiation</a>
+            <a href="./trigrules.html">Trigonometric Differentiation</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="navbutton" onclick="location.href='./integrals.html'">Integrals</button>
+          <div class="dropdown-content" style="left: 71%;">
+            <a href="./antiderivatives.html">Antiderivatives</a>
+            <a href="./area.html">Area and Riemann Sums</a>
+            <a href="./definiteintegrals.html">Definite Integrals</a>
+            <a href="./sumcalculator.html">Riemann Sum Calculator</a>
+          </div>
+        </div>
+        <div id="homebutton" onclick="location.href='./index.html'">Back to Home</div>
+        <div style="width: 100%; font-family: Bai Jamjuree; text-align: center; font-size: 1vw; grid-column: 1/span 3;">Keaton Hawkins AP Calculus AB Final</div>
+      </div>
+
+
+
+        <form style="width: 95%; display: block; margin: 2% auto 0 auto;">
+            <input style="width: 24.5%; height: 10vh; font-size: 1.3vw;" type="text" id="userequation" placeholder="Enter your function">
+            <input style="width: 24.5%; height: 10vh; font-size: 1.3vw;" type="number" id="lowerbound" placeholder="Enter your lower bound">
+            <input style="width: 24.5%; height: 10vh; font-size: 1.3vw;" type="number" id="upperbound" placeholder="Enter your upper bound">
+            <input style="width: 24.5%; height: 10vh; font-size: 1.3vw;" type="number" id="numofrect" placeholder="How many rectangles do you want?">
+            <input style="width: 100%; height: 10vh; font-size: 1.3vw; margin-top: 1%;" type="text" id="leftrightcenter" placeholder="Type 'left', 'right', or 'midpoint'">
+        </form>
+      <button onclick="equation()" style="font-size: 1.3vw; height: 10vh; display: block; margin: 0 auto; margin-top: 1%;" onclick="equation()">Calculate Riemann Sum</button>
+
+      <div id="outputwrapper">
+        <div style="width: 100%; text-align: center; font-size: 4vh; font-color: grey; height: 8vh; font-family: Bai Jamjuree;">The Riemann Sum evaluates to:</div>
+        <div id="output" style="text-align: center; font-size: 6vh; font-color: black; font-family: Bai Jamjuree;"></div>
+      </div>
+      <div class="normaltext">
+        READ THIS BEFORE USING THE CALCULATOR:
+        <ul>
+          <li>This calculator works with polynomials and exponentials. It also works with ln and log<sub>10</sub> but not other logarithms unless you use the change of base formula. It also works with sine and cosine, but you must combine them to get the other four trigonometric functions. You can use parentheses to control the order of operations.</li>
+          <li>Type your function into the first box on the left, which says, "enter your function." Don't type y= or f(x)= before your function. Just type the function itself. For instance, if your function is f(x) = x<sup>2</sup>, just type x<sup>2</sup>.</li>
+          <li>Enter the lower bound of your Riemann Sum, the upper bound of your Riemann Sum, and the number of rectangles you want to use in your calculations into the respective boxes.</li>
+          <li>In the bottom box, type "right", "left", or "midpoint" depending on whether you want the calculator to take a right Riemann Sum, a left Riemann Sum, or a midpoint Riemann Sum. Make sure to type the word exactly correctly, without any uppercase letters.</li>
+          <li>You must use x as your variable.</li>
+          <li>Use the carrot (^) to represent exponents. For instance, if you want to enter the function x<sup>6</sup>, type "x^6".</li>
+          <li>To represent π, type "pi" in lowercase letters.</li>
+          <li>Use the asterisk for multiplication. You cannot place values adjacent to each other to represent multiplication. If your equation is 4x<sup>2</sup>, you must type "4*x^2".</li>
+          <li>Special functions require you to use Javascript Math methods. For trig functions, all this entails is adding a "Math." before your function. See the documentation below. You must type them exactly as they are listed below, otherwise the calculator won't recognize them.</li>
+            <ul style="padding-left: 5%;">
+              <li>To type sin(u), where u is any function, type "Math.sin(u)". If you wanted to enter the function sin(πx + 4), you would type "Math.sin(pi*x+4)".</li>
+              <li>To type cos(u), where u is any function, type "Math.cos(u)". If you wanted to enter the function cos(πx + 4), you would type "Math.cos(pi*x+4)".</li>
+              <li>To type ln(u), where u is any function, type "Math.log(u)". If you wanted to enter the function ln(πx + 4), you would type "Math.log(pi*x+4)".</li>
+              <li>To type log<sub>10</sub>(u), where u is any function, type "Math.log10(u)". If you wanted to enter the function log<sub>10</sub>(πx + 4), you would type "Math.log10(pi*x+4)".</li>
+            </ul>
+          <li>Note: because Javascript numbers are IEEE 754 floating point numbers, there are inherent inaccuracies in how it stores numbers. If a number has too many decimal places, Javascript will run out of bit storage for decimals and attempt to round the number. This can cause Javascript to evaluate equivalent values as slightly different values. So, if the calculator returns a number like 3.1086244689504383e-15, it is safe to assume that the actual answer is zero, and there was simply a Javascript binary data error. Such errors are unavoidable without completely reworking Javascript's eval framework.</li>
+        </ul>
+      </div>
+
+    </div>
+  </body>
+</html>

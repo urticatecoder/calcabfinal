@@ -94,3 +94,11 @@ html,body{
   width: 100%;
   text-align: center;
 }
+
+#outputwrapper{
+  width: 85%;
+  height: 30vh;
+  border: 2px solid black;
+  display: block;
+  margin: 1% auto 0 auto;
+}
