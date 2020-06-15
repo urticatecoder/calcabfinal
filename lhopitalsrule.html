@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="./calcfinal.js" type="text/javascript"></script>
+    <link href="./derivatives.css" type="text/css" rel="stylesheet">
+    <title>L'Hopital's Rule | Keaton Hawkins</title>
+  </head>
+  <body style="background: linear gradient(to right, #32a852, #32a852);">
+    <div style="margin-bottom: 5vh;">
+      <div id="navbarwrapper">
+        <div class="dropdown">
+          <button class="navbutton" onclick="location.href='./limits.html'">Limits</button>
+          <div class="dropdown-content" style="left: 4.5%;">
+            <a href="./lhopitalsrule.html">L'Hopital's Rule</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="navbutton" onclick="location.href='./derivatives.html'">Derivatives</button>
+          <div class="dropdown-content" style="left: 38%">
+            <a href="./limitdefinition.html">Limit Definition</a>
+            <a href="./powerrule.html">Power Rule</a>
+            <a href="./sumrule.html">Sum/Difference Rule</a>
+            <a href="./productrule.html">Product Rule</a>
+            <a href="./chainrule.html">Chain Rule</a>
+            <a href="./quotientRule.html">Quotient Rule</a>
+            <a href="./exprule.html">Exponential Differentiation</a>
+            <a href="./trigrules.html">Trigonometric Differentiation</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="navbutton" onclick="location.href='./integrals.html'">Integrals</button>
+          <div class="dropdown-content" style="left: 71%;">
+            <a href="./antiderivatives.html">Antiderivatives</a>
+            <a href="./area.html">Area and Riemann Sums</a>
+            <a href="./definiteintegrals.html">Definite Integrals</a>
+            <a href="./sumcalculator.html">Riemann Sum Calculator</a>
+          </div>
+        </div>
+        
+        <div style="width: 100%; font-family: Bai Jamjuree; text-align: center; font-size: 1vw; grid-column: 1/span 3;">Keaton Hawkins AP Calculus AB Final</div>
+      </div>
+
+
+
+      <div class="ruleheader">L'hopital's Rule</div>
+      <br><br>
+      <h2 style="display: block; margin: 0 auto; width: 90%; font-family: 'Bai Jamjuree'; text-align: center; font-size: 4vh; font-weight: normal;">You must have a working knowledge of derivatives before reading this page</h2>
+      <br><br>
+      <div class="normaltext">Just as we can use limits to define derivatives, derivatives can play a helpful role in evaluating limits. Consider the following function and its graph: </div>
+      <br><br>
+      <img src="./images/lhopitalsfunction.PNG" style="margin: 0 auto; display: block;">
+      <br><br>
+      <img src="./images/lhopitalsgraph.PNG" style="width: 40%; display: block; margin: 0 auto;">
+      <br><br>
+      <div class="normaltext">Suppose we wanted to find the value of this function at x = 1. Plugging in 1, we get sin(π)/(1<sup>2</sup>-1) = 0/0, which is indeterminate. So we can't find the value of the function at x = 1, but we <i>can</i> ask what the function approaches as x approaches 1. That is, we can evaluate the following statement:</div>
+      <br><br>
+      <img src="./images/lhopitalslimit.PNG" style="display: block; margin: 0 auto;">
+      <br><br>
+      <div class="normaltext">But how would we evaluate this limit? It seems pretty difficult to manipulate the expression algebraically in order to eliminate the indeterminancy. To answer this, let's consider the functions in the numerator and denominator separately. See them graphed together below:</div>
+      <br><br>
+      <img src="./images/separategraphs.PNG" style="display: block; margin: 0 auto;">
+      <br><br>
+      <div class="normaltext">As you can see, the graphs both equal zero at x = 1. Let's consider what happens when we nudge the input by an infinitesimally small amount, dx. Remember we think of dx as going to zero, so as it approaches 0, the corresponding change in output for each function will get closer and closer to zero too, and thus approach the actual value of the function at x = 1. If we take the ratio between these two output changes, we get d(sin(πx)) / d(x<sup>2</sup> - 1). Let's say f(x) = sin(πx) and g(x) = x<sup>2</sup> - 1. Our ratio then becomes (f'(x)dx) / (g'(x)dx). Of course, the dx in the numerator cancels out with the dx in the denominator. So, we're left with f'(x) / g'(x). And remember that this ratio becomes a better and better approximation of f(x)/g(x) at the value x = 1, as dx approaches zero. This is because as the change in x goes to zero, the change in each function value also goes to zero, so after the limiting process, each resultant derivative is only an infinitesimal distance away from the function at x = 1. This only holds true at x = 1, because that's the only point where attempting to find the ratio between the two functions yields 0/0. d(f(x)) and d(g(x)) each measure the <i>change</i> in their respective functions. So, they only accurately approximate their respective functions at the points where there respective functions equal zero.<br><br> In any case, this rule holds up for any function. Whenever the limit of the ratio between two functions evaluates to 0/0 or ∞/∞, you can take the derivative of the numerator and denominator and take the limit of that new expression. This is called L'Hôpital's Rule:</div>
+      <br><br>
+      <img src="./images/lhopitalsrule.PNG" style="display: block; margin: 0 auto;">
+    </div>
+  </body>
+</html>
