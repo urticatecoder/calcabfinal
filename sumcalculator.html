@@ -73,7 +73,7 @@
               <li>To type ln(u), where u is any function, type "Math.log(u)". If you wanted to enter the function ln(πx + 4), you would type "Math.log(pi*x+4)".</li>
               <li>To type log<sub>10</sub>(u), where u is any function, type "Math.log10(u)". If you wanted to enter the function log<sub>10</sub>(πx + 4), you would type "Math.log10(pi*x+4)".</li>
             </ul>
-          <li>Note: because Javascript numbers are IEEE 754 floating point numbers, there are inherent inaccuracies in how it stores numbers. If a number has too many decimal places, Javascript will run out of bit storage for decimals and attempt to round the number. This can cause Javascript to evaluate equivalent values as slightly different values. So, if the calculator returns a number like 3.1086244689504383e-15, it is safe to assume that the actual answer is zero, and there was simply a Javascript binary data error. Such errors are unavoidable without completely reworking Javascript's eval framework.</li>
+          <li>Note: because Javascript numbers are IEEE 754 floating point numbers, there are inherent inaccuracies in how javascript stores precise values. If a number has too many decimal places, Javascript will run out of bit storage for decimals and attempt to round the number. This can cause Javascript to evaluate equivalent values as slightly different values. So, if the calculator returns a number like 3.1086244689504383e-15, it is safe to assume that the actual answer is zero, and there was simply a Javascript binary data error. Such errors are unavoidable without completely reworking Javascript's eval framework.</li>
         </ul>
       </div>
 
