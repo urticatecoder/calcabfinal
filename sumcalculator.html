@@ -58,8 +58,8 @@
       <div class="normaltext">
         READ THIS BEFORE USING THE CALCULATOR:
         <ul>
-          <li>This calculator works with polynomials and exponentials. It also works with ln and log<sub>10</sub> but not other logarithms unless you use the change of base formula. It also works with sine and cosine, but you must combine them to get the other four trigonometric functions. You can use parentheses to control the order of operations.</li>
-          <li>Type your function into the first box on the left, which says, "enter your function." Don't type y= or f(x)= before your function. Just type the function itself. For instance, if your function is f(x) = x<sup>2</sup>, just type x<sup>2</sup>.</li>
+          <li>This calculator works with polynomials and exponentials. It also works with ln and log<sub>10</sub> ("Math.log10") but not other logarithms unless you use the change of base formula. It also works with sine ("Math.sin") and cosine ("Math.cos"), but you must combine them to get the other four trigonometric functions. You can use parentheses to control the order of operations.</li>
+          <li>Type your function into the first box on the left, which says, "enter your function." Don't type y= or f(x)= before your function. Just type the function itself. For instance, if your function is f(x) = x<sup>2</sup>, just type x^2.</li>
           <li>Enter the lower bound of your Riemann Sum, the upper bound of your Riemann Sum, and the number of rectangles you want to use in your calculations into the respective boxes.</li>
           <li>In the bottom box, type "right", "left", or "midpoint" depending on whether you want the calculator to take a right Riemann Sum, a left Riemann Sum, or a midpoint Riemann Sum. Make sure to type the word exactly correctly, without any uppercase letters.</li>
           <li>You must use x as your variable.</li>
@@ -70,10 +70,10 @@
             <ul style="padding-left: 5%;">
               <li>To type sin(u), where u is any function, type "Math.sin(u)". If you wanted to enter the function sin(πx + 4), you would type "Math.sin(pi*x+4)".</li>
               <li>To type cos(u), where u is any function, type "Math.cos(u)". If you wanted to enter the function cos(πx + 4), you would type "Math.cos(pi*x+4)".</li>
-              <li>To type ln(u), where u is any function, type "Math.log(u)". If you wanted to enter the function ln(πx + 4), you would type "Math.log(pi*x+4)".</li>
+              <li>To type ln(u), where u is any function, type "Math.log(u)" or "Math.ln(u)". If you wanted to enter the function ln(πx + 4), you would type "Math.log(pi*x+4)".</li>
               <li>To type log<sub>10</sub>(u), where u is any function, type "Math.log10(u)". If you wanted to enter the function log<sub>10</sub>(πx + 4), you would type "Math.log10(pi*x+4)".</li>
             </ul>
-          <li>Note: because Javascript numbers are IEEE 754 floating point numbers, there are inherent inaccuracies in how javascript stores precise values. If a number has too many decimal places, Javascript will run out of bit storage for decimals and attempt to round the number. This can cause Javascript to evaluate equivalent values as slightly different values. So, if the calculator returns a number like 3.1086244689504383e-15, it is safe to assume that the actual answer is zero, and there was simply a Javascript binary data error. Such errors are unavoidable without completely reworking Javascript's eval framework.</li>
+          <li>Note: Because of the way computers store numbers, some values may be slightly inaccurate. If the calculator returns a number like 3.1086244689504383e-15, it is safe to assume that the actual answer is zero, and there there was a rounding error.</li>
         </ul>
       </div>
 
